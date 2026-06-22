@@ -1823,8 +1823,7 @@ function render(month) {
   // Remove old data rows (keep 8 header cells)
   while(grid.children.length > 8) grid.removeChild(grid.lastChild);
 
-  const _t = month.split('-');
-  document.getElementById('mainTitle').textContent = _t[0] + '년 ' + parseInt(_t[1],10) + '월 체슬리 시황판';
+  document.getElementById('mainTitle').textContent = '체슬리 시황판';
   document.getElementById('monthSelect').value = month;
 
   MKT_ORDER.forEach(mk => {
