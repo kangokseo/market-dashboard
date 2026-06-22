@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>주식시장 진단 Dashboard</title>
+<title>체슬리 시황판 Dashboard</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
   * { margin:0; padding:0; box-sizing:border-box; }
@@ -198,7 +198,7 @@
 <div class="bg"></div>
 <div class="wrap">
   <div class="title">
-    <h1 id="mainTitle">주식시장 진단</h1>
+    <h1 id="mainTitle">체슬리 시황판</h1>
     <div class="sub">Monthly Market Indicators Dashboard</div>
   </div>
 
@@ -1824,7 +1824,7 @@ function render(month) {
   while(grid.children.length > 8) grid.removeChild(grid.lastChild);
 
   const _t = month.split('-');
-  document.getElementById('mainTitle').textContent = _t[0] + '년 ' + parseInt(_t[1],10) + '월 주식시장 진단';
+  document.getElementById('mainTitle').textContent = _t[0] + '년 ' + parseInt(_t[1],10) + '월 체슬리 시황판';
   document.getElementById('monthSelect').value = month;
 
   MKT_ORDER.forEach(mk => {
