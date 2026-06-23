@@ -1942,4 +1942,29 @@ async function init() {
 }
 
 function loadDataRanges() {
-  const conta
+  const container = document.getElementById('dataRange');
+  container.innerHTML = '';
+  for (const name of MKT_ORDER) {
+    const r = EMBEDDED_RANGES[name];
+    if(!r) continue;
+    const card = document.createElement('div');
+    card.className = 'range-card';
+    card.innerHTML = `
+      <div class="range-name">${MKT_DISPLAY[name] || name}</div>
+      <div class="range-row">
+        <span class="range-label">Start</span>
+        <span class="range-val">${r[0]}</span>
+      </div>
+      <div class="range-row">
+        <span class="range-label">End</span>
+        <span class="range-val end-date">${r[1]}</span>
+      </div>
+    `;
+    container.appendChild(card);
+  }
+}
+
+init();
+</script>
+</body>
+</html>
